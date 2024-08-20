@@ -1,0 +1,6 @@
+select
+  count(patient_id) as patients_in_group,
+  weight - weight % 10 as weight_group
+from patients
+group by weight_group
+order by weight_group desc
