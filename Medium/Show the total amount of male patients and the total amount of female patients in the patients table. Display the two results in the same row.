@@ -1,0 +1,9 @@
+select
+  count(gender) as no_of_male,
+  (
+    select count(gender)
+    FROM patients
+    where gender = 'F'
+  ) as no_of_female
+from patients
+where gender = 'M'
