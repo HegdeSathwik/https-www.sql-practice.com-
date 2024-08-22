@@ -1,0 +1,6 @@
+select pr.province_name
+from province_names pr
+  join patients pa on pa.province_id = pr.province_id
+group by pr.province_name
+having
+  sum(pa.gender = 'M') > sum(pa.gender = 'F');
