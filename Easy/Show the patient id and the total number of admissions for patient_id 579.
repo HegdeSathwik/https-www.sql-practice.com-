@@ -1,0 +1,5 @@
+select
+  patient_id,
+  count(patient_id) as no_of_admissions
+from admissions
+where patient_id = 579
