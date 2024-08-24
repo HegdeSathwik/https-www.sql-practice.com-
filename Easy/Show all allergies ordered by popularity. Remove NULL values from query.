@@ -1,0 +1,7 @@
+select
+  allergies,
+  count(patient_id)
+from patients
+where allergies is not null
+group by allergies
+order by count(patient_id) desc
